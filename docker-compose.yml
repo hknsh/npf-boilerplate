@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:alpine
+    restart: unless-stopped
+    container_name: db
+    ports:
+      - ${POSTGRES_PORT}:${POSTGRES_PORT}
+    env_file:
+      - .docker.env
+    volumes:
+      - db:/var/lib/postgresql/data
+
+  api:
+    restart: unless-stopped
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - ${SERVER_PORT}:${SERVER_PORT}
+    depends_on:
+      - db
+    env_file:
+      - .docker.env
+
+volumes:
+  db:
+    name: db
