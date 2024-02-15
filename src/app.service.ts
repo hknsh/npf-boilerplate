@@ -5,9 +5,9 @@ import { PrismaService } from "./prisma.service";
 export class AppService {
 	constructor(private readonly prisma: PrismaService) {}
 
-  async createPost() {}
+	async createPost() {}
 
-  async deletePost() {}
+	async deletePost() {}
 
-  async getPost() {}
+	async getPost() {}
 }

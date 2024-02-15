@@ -11,11 +11,11 @@ export class AppController {
 	@ApiOperation({ summary: "Returns a post" })
 	getPost() {}
 
-  @Post()
-  @ApiOperation({ summary: "Creates a post" })
-  createPost() {}
+	@Post()
+	@ApiOperation({ summary: "Creates a post" })
+	createPost() {}
 
-  @Delete()
-  @ApiOperation({ summary: "Deletes a post" })
-  deletePost() {}
+	@Delete()
+	@ApiOperation({ summary: "Deletes a post" })
+	deletePost() {}
 }
