@@ -1,6 +1,6 @@
 <div align="center">
 
-### NFDPSB Boilerplate
+### NPF Boilerplate
 
 A **NestJS** + **Fastify** + **Docker** + **Prisma** + **Swagger** + **BiomeJS** boilerplate. 
 
